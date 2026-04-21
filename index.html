@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грядки на водорослях — гид по микрозелени и не только</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #f5faf2;
+            color: #1a3b2f;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        /* Шапка */
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #e0f0e2;
+            border-radius: 48px;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            background: linear-gradient(135deg, #1e6b3b, #2c9b54);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #2d5a44;
+        }
+        /* Навигация (минимальная) */
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #c8e0cd;
+            padding-bottom: 1rem;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #1e5a3c;
+            font-weight: 500;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            background: #eaf4e6;
+            transition: 0.2s;
+        }
+        .nav a:hover {
+            background: #cde2d3;
+        }
+        /* Секции */
+        .section {
+            background: white;
+            border-radius: 32px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #ddecdd;
+        }
+        .section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1a4a30;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .section p {
+            color: #2a4a38;
+            margin-bottom: 1rem;
+        }
+        .placeholder-link {
+            display: inline-block;
+            background: #f0f6ec;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #236b45;
+            font-weight: 500;
+            border: 1px solid #c2dcb8;
+            transition: 0.1s;
+        }
+        .placeholder-link:hover {
+            background: #e2efda;
+        }
+        /* Футер (как в примере) */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #c8e0cd;
+            font-size: 0.9rem;
+            color: #4c6b5a;
+        }
+        footer a {
+            color: #236b45;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .section h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Приветствие -->
+    <div class="hero">
+        <h1>🌊 Грядки на водорослях</h1>
+        <p>химия без химии — от теории к практике</p>
+    </div>
+
+    <!-- Минимальная навигация (заглушки, ведущие на будущие страницы) -->
+    <div class="nav">
+        <a href="#">🏠 Главная</a>
+        <a href="#">📖 Содержание книги</a>
+        <a href="#">📊 Таблицы для микрозелени</a>
+        <a href="#">🪜 Схема стеллажа</a>
+        <a href="#">🌱 Польза микрозелени</a>
+    </div>
+
+    <!-- Блок: Книга (содержание) -->
+    <div class="section">
+        <h2>📖 Книга «Грядки на водорослях»</h2>
+        <p>Здесь появится оглавление и ссылки на главы методички, как только тексты будут перенесены из репозитория <code>UnexpectedGardener</code>.</p>
+        <a href="#" class="placeholder-link">Содержание →</a>
+    </div>
+
+    <!-- Блок: Таблицы для микрозелени -->
+    <div class="section">
+        <h2>📊 Таблицы для микрозелени</h2>
+        <p>Сроки высева, урожайность, совместимость культур — скоро будут таблицы.</p>
+        <a href="#" class="placeholder-link">Подробнее →</a>
+    </div>
+
+    <!-- Блок: Схема стеллажа -->
+    <div class="section">
+        <h2>🪜 Схема стеллажа</h2>
+        <p>Чертёж и рекомендации по сборке стеллажа для микрозелени с подсветкой и системой полива.</p>
+        <a href="#" class="placeholder-link">Посмотреть схему →</a>
+    </div>
+
+    <!-- Блок: Польза микрозелени по культурам -->
+    <div class="section">
+        <h2>🌿 Польза микрозелени по культурам</h2>
+        <p>Что даёт редис, подсолнечник, горох, базилик — таблица витаминов и эффектов.</p>
+        <a href="#" class="placeholder-link">Читать →</a>
+    </div>
+
+    <!-- Футер ровно как в вашем примере, плюс год и ссылки -->
+    <footer>
+        <p>© 2025 GreenBandYt | <a href="https://github.com/GreenBandYt">GitHub</a> | <a href="https://zerocoder.ru/">Zerocoder</a></p>
+    </footer>
+</div>
+</body>
+</html>
