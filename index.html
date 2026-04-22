@@ -41,7 +41,7 @@
             font-size: 1.2rem;
             color: #2d5a44;
         }
-        /* Навигация (минимальная) */
+        /* Навигация */
         .nav {
             display: flex;
             flex-wrap: wrap;
@@ -85,6 +85,13 @@
             color: #2a4a38;
             margin-bottom: 1rem;
         }
+        /* Стили для кнопок книги (добавлено) */
+        .book-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
         .placeholder-link {
             display: inline-block;
             background: #f0f6ec;
@@ -99,7 +106,7 @@
         .placeholder-link:hover {
             background: #e2efda;
         }
-        /* Футер (как в примере) */
+        /* Футер */
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -126,50 +133,47 @@
     <!-- Приветствие -->
     <div class="hero">
         <h1>🌊 Грядки на водорослях или химия без химии</h1>
-        <p> от теории к практике</p>
+        <p>от теории к практике</p>
     </div>
 
-    <!-- Минимальная навигация (заглушки, ведущие на будущие страницы) -->
+    <!-- Навигация (без изменений, как у вас было) -->
     <div class="nav">
         <a href="https://greenbandyt.github.io/GreenCodeGarden/">🌿 GreenCodeGarden</a>
-        <a href="#">🏠 Главная</a>
+        <a href="index.html">🏠 Главная</a>
         <a href="soderzhanie.html">📖 Содержание книги</a>
         <a href="#">📊 Таблицы для микрозелени</a>
         <a href="#">🪜 Схема стеллажа</a>
         <a href="#">🌱 Польза микрозелени</a>
     </div>
 
-    <!-- Блок: Книга (содержание) -->
+    <!-- Блок: Книга (исправлен: две кнопки, убрали лишний текст) -->
     <div class="section">
         <h2>📖 Книга «Грядки на водорослях или Химия без химии»</h2>
         <div class="book-links">
-            <a href="vvedenie.html" class="read-link">📖 Читать введение →</a>
-            <a href="soderzhanie.html" class="read-link">📚 Смотреть содержание →</a>
+            <a href="vvedenie.html" class="placeholder-link">📖 Введение →</a>
+            <a href="soderzhanie.html" class="placeholder-link">📚 Содержание →</a>
         </div>
     </div>
 
-    <!-- Блок: Таблицы для микрозелени -->
+    <!-- Остальные блоки (пока заглушки) -->
     <div class="section">
         <h2>📊 Таблицы для микрозелени</h2>
         <p>Сроки высева, урожайность, совместимость культур — скоро будут таблицы.</p>
         <a href="#" class="placeholder-link">Подробнее →</a>
     </div>
 
-    <!-- Блок: Схема стеллажа -->
     <div class="section">
         <h2>🪜 Схема стеллажа</h2>
         <p>Чертёж и рекомендации по сборке стеллажа для микрозелени с подсветкой и системой полива.</p>
         <a href="#" class="placeholder-link">Посмотреть схему →</a>
     </div>
 
-    <!-- Блок: Польза микрозелени по культурам -->
     <div class="section">
         <h2>🌿 Польза микрозелени по культурам</h2>
         <p>Что даёт редис, подсолнечник, горох, базилик — таблица витаминов и эффектов.</p>
         <a href="#" class="placeholder-link">Читать →</a>
     </div>
 
-    <!-- Футер ровно как в вашем примере, плюс год и ссылки -->
     <footer>
         <p>© 2025 GreenBandYt | <a href="https://github.com/GreenBandYt">GitHub</a> | <a href="https://zerocoder.ru/">Zerocoder</a></p>
     </footer>
