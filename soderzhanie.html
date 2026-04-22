@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Содержание — Грядки на водорослях</title>
-    <!-- Подключаем библиотеку marked, чтобы превратить Markdown в HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         * {
@@ -23,7 +22,6 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        /* Шапка */
         .hero {
             text-align: center;
             padding: 2rem 1rem;
@@ -43,7 +41,6 @@
             font-size: 1.2rem;
             color: #2d5a44;
         }
-        /* Навигация */
         .nav {
             display: flex;
             flex-wrap: wrap;
@@ -65,7 +62,6 @@
         .nav a:hover {
             background: #cde2d3;
         }
-        /* Основной контент */
         .content-card {
             background: white;
             border-radius: 32px;
@@ -73,7 +69,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             border: 1px solid #ddecdd;
         }
-        /* Стили для содержимого, которое подгрузится */
         .markdown-body {
             font-size: 1.1rem;
         }
@@ -89,27 +84,27 @@
             border-left: 4px solid #2c7a4d;
             padding-left: 1rem;
         }
-        .markdown-body h3 {
-            font-size: 1.2rem;
-            margin: 1rem 0 0.5rem 0;
-            color: #2d5a44;
-        }
-        .markdown-body ul, .markdown-body ol {
+        .markdown-body ul {
             padding-left: 1.8rem;
             margin-bottom: 1rem;
         }
         .markdown-body li {
             margin: 0.4rem 0;
         }
-        .markdown-body a {
-            color: #236b45;
+        .placeholder-link {
+            display: inline-block;
+            background: #f0f6ec;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
             text-decoration: none;
-            border-bottom: 1px dashed #a8ceb0;
+            color: #236b45;
+            font-weight: 500;
+            border: 1px solid #c2dcb8;
+            transition: 0.1s;
         }
-        .markdown-body a:hover {
-            border-bottom: 1px solid #236b45;
+        .placeholder-link:hover {
+            background: #e2efda;
         }
-        /* Стили для футера */
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -133,27 +128,30 @@
 </head>
 <body>
 <div class="container">
-    <!-- Шапка -->
     <div class="hero">
         <h1>🌊 Грядки на водорослях или химия без химии</h1>
         <p>от теории к практике</p>
     </div>
 
-    <!-- Навигация (такая же, как на главной) -->
     <div class="nav">
         <a href="https://greenbandyt.github.io/GreenCodeGarden/">🌿 GreenCodeGarden</a>
         <a href="index.html">🏠 Главная</a>
         <a href="soderzhanie.html">📖 Содержание книги</a>
+        <a href="vvedenie.html">📖 Введение</a>
         <a href="#">📊 Таблицы для микрозелени</a>
         <a href="#">🪜 Схема стеллажа</a>
         <a href="#">🌱 Польза микрозелени</a>
     </div>
 
-    <!-- Блок, куда будет загружено оглавление -->
     <div class="content-card">
         <div id="content-container" class="markdown-body">
             <p style="text-align: center; padding: 2rem;">⏳ Загрузка содержания...</p>
         </div>
+    </div>
+
+    <!-- Кнопка назад -->
+    <div style="text-align: center; margin: 2rem 0 0;">
+        <a href="index.html" class="placeholder-link">← Назад</a>
     </div>
 
     <footer>
@@ -164,7 +162,6 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const container = document.getElementById("content-container");
-        // Ссылка на ваш файл CONTENTS.md в репозитории UnexpectedGardener
         const contentUrl = "https://raw.githubusercontent.com/GreenBandYt/UnexpectedGardener/main/chapters/CONTENTS.md";
 
         fetch(contentUrl)
@@ -175,14 +172,13 @@
                 return response.text();
             })
             .then(markdown => {
-                // Преобразуем Markdown в HTML с помощью библиотеки marked
                 container.innerHTML = marked.parse(markdown);
             })
             .catch(error => {
                 console.error("Ошибка загрузки содержания:", error);
                 container.innerHTML = `
                     <div style="text-align: center; padding: 2rem;">
-                        <p>❌ Не удалось загрузить содержание книги.</p>
+                        <p>❌ Не удалось загрузить содержание.</p>
                         <p>Убедитесь, что файл <code>CONTENTS.md</code> доступен по адресу:<br>
                         <a href="${contentUrl}" target="_blank">${contentUrl}</a></p>
                         <p>И что репозиторий <strong>UnexpectedGardener</strong> является <strong>публичным</strong>.</p>
