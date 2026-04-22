@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Введение — Грядки на водорослях</title>
-    <!-- Подключаем библиотеку marked, чтобы превратить Markdown в HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        /* Скопируйте сюда ВСЕ стили из вашего файла index.html (от * до @media) */
         * {
             margin: 0;
             padding: 0;
@@ -101,6 +99,20 @@
         .markdown-body li {
             margin: 0.4rem 0;
         }
+        .placeholder-link {
+            display: inline-block;
+            background: #f0f6ec;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #236b45;
+            font-weight: 500;
+            border: 1px solid #c2dcb8;
+            transition: 0.1s;
+        }
+        .placeholder-link:hover {
+            background: #e2efda;
+        }
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -143,6 +155,11 @@
         <div id="content-container" class="markdown-body">
             <p style="text-align: center; padding: 2rem;">⏳ Загрузка введения...</p>
         </div>
+    </div>
+
+    <!-- Кнопка назад -->
+    <div style="text-align: center; margin: 2rem 0 0;">
+        <a href="index.html" class="placeholder-link">← Назад</a>
     </div>
 
     <footer>
