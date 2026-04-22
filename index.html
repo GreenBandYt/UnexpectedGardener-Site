@@ -21,7 +21,6 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        /* Шапка */
         .hero {
             text-align: center;
             padding: 2rem 1rem;
@@ -41,7 +40,6 @@
             font-size: 1.2rem;
             color: #2d5a44;
         }
-        /* Навигация */
         .nav {
             display: flex;
             flex-wrap: wrap;
@@ -63,7 +61,6 @@
         .nav a:hover {
             background: #cde2d3;
         }
-        /* Секции */
         .section {
             background: white;
             border-radius: 32px;
@@ -85,13 +82,6 @@
             color: #2a4a38;
             margin-bottom: 1rem;
         }
-        /* Стили для кнопок книги (добавлено) */
-        .book-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
         .placeholder-link {
             display: inline-block;
             background: #f0f6ec;
@@ -106,7 +96,6 @@
         .placeholder-link:hover {
             background: #e2efda;
         }
-        /* Футер */
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -130,13 +119,11 @@
 </head>
 <body>
 <div class="container">
-    <!-- Приветствие -->
     <div class="hero">
         <h1>🌊 Грядки на водорослях или химия без химии</h1>
         <p>от теории к практике</p>
     </div>
 
-    <!-- Навигация (без изменений, как у вас было) -->
     <div class="nav">
         <a href="https://greenbandyt.github.io/GreenCodeGarden/">🌿 GreenCodeGarden</a>
         <a href="index.html">🏠 Главная</a>
@@ -146,16 +133,15 @@
         <a href="#">🌱 Польза микрозелени</a>
     </div>
 
-    <!-- Блок: Книга (исправлен: две кнопки, убрали лишний текст) -->
+    <!-- Блок: Книга (две кнопки, стиль как у остальных) -->
     <div class="section">
         <h2>📖 Книга «Грядки на водорослях или Химия без химии»</h2>
-        <div class="book-links">
-            <a href="vvedenie.html" class="placeholder-link">📖 Введение →</a>
-            <a href="soderzhanie.html" class="placeholder-link">📚 Содержание →</a>
-        </div>
+        <a href="vvedenie.html" class="placeholder-link">📖 Введение →</a>
+        &nbsp;&nbsp;
+        <a href="soderzhanie.html" class="placeholder-link">📚 Содержание →</a>
     </div>
 
-    <!-- Остальные блоки (пока заглушки) -->
+    <!-- Остальные блоки без изменений -->
     <div class="section">
         <h2>📊 Таблицы для микрозелени</h2>
         <p>Сроки высева, урожайность, совместимость культур — скоро будут таблицы.</p>
