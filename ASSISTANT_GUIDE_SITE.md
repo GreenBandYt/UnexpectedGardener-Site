@@ -56,6 +56,12 @@ UnexpectedGardener-Site/
     └── css/
         └── style.css            # все стили (один файл)
 ```
+**Конфигурация Jekyll (`_config.yml`):**
+
+```yaml
+baseurl: "/UnexpectedGardener-Site"
+url: "https://greenbandyt.github.io"
+permalink: /:title.html
 
 **Важно:** эта структура должна быть согласована и создана **в самом начале**, а не после десятка файлов в корне.
 
