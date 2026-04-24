@@ -123,7 +123,7 @@ UnexpectedGardener-Site/
 │       ├── greeny-faq.json    # база «вопрос – ответ»
 │       └── greeny-index.json  # автогенерируемый индекс глав (можно обновлять через GitHub Actions)
 ```
-```markdown
+
 ## Как Greeny подключается к страницам
 
 В шаблоне `_layouts/default.html` (или прямо в `footer.html`) добавляется строчка:
