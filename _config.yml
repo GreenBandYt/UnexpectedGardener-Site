@@ -1,3 +1,5 @@
 baseurl: "/UnexpectedGardener-Site"
 url: "https://greenbandyt.github.io"
 permalink: /:title.html
+include:
+  - admin_photos
