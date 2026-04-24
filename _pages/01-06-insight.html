@@ -1,0 +1,42 @@
+---
+layout: default
+title: "1.6 Осознание: семенам не хватает природного «волшебного пенделя» и плесень 'ест все'"
+---
+
+<div class="content-card">
+    <div id="content-container" class="markdown-body">
+        <p style="text-align: center; padding: 2rem;">⏳ Загрузка содержимого...</p>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+    <div style="flex: 1; text-align: left;">
+        <a href="/01-05-broccoli-amaranth" class="placeholder-link">← Предыдущий</a>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <a href="/soderzhanie" class="placeholder-link">📖 Содержание</a>
+    </div>
+    <div style="flex: 1; text-align: right;">
+        <!-- нет следующего -->
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("content-container");
+        const contentUrl = "https://raw.githubusercontent.com/GreenBandYt/UnexpectedGardener/main/chapters/01-my-microgreens/01-06-insight.md";
+        fetch(contentUrl)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(markdown => {
+                container.innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error("Ошибка загрузки содержимого:", error);
+                container.innerHTML = `<p>❌ Не удалось загрузить содержимое. Убедитесь, что файл <code>01-06-insight.md</code> доступен.</p>`;
+            });
+    });
+</script>
