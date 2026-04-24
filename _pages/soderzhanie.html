@@ -24,6 +24,14 @@ title: "Содержание"
                 let html = marked.parse(markdown);
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = html;
+                // Заменяем ссылки на .html на красивые адреса
+                const links = tempDiv.querySelectorAll('a');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.endsWith('.html')) {
+                        link.setAttribute('href', href.replace('.html', ''));
+                    }
+                });
                 // Заголовки h2 в ссылки
                 const headings = tempDiv.querySelectorAll('h2');
                 headings.forEach(h2 => {
