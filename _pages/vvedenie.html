@@ -1,0 +1,31 @@
+---
+layout: default
+title: "Введение"
+---
+<div class="content-card">
+    <div id="content-container" class="markdown-body">
+        <p style="text-align: center; padding: 2rem;">⏳ Загрузка введения...</p>
+    </div>
+</div>
+<div style="text-align: center; margin: 2rem 0 0;">
+    <a href="/soderzhanie" class="placeholder-link">← К содержанию</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("content-container");
+        const contentUrl = "https://raw.githubusercontent.com/GreenBandYt/UnexpectedGardener/main/chapters/00-introduction.md";
+        fetch(contentUrl)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(markdown => {
+                container.innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error("Ошибка загрузки введения:", error);
+                container.innerHTML = `<p>❌ Не удалось загрузить введение.</p>`;
+            });
+    });
+</script>
