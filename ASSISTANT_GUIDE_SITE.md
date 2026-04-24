@@ -124,7 +124,6 @@ UnexpectedGardener-Site/
 
 В шаблоне `_layouts/default.html` (или прямо в `footer.html`) добавляется строчка:
 
-```liquid
 {% include greeny.html %}
 Виджет отображается внизу справа (как плавающая кнопка) или в отдельном блоке — по желанию автора.
 
