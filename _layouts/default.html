@@ -82,21 +82,6 @@
         .placeholder-link:hover {
             background: #e2efda;
         }
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #c8e0cd;
-            font-size: 0.9rem;
-            color: #4c6b5a;
-        }
-        footer a {
-            color: #236b45;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
         @media (max-width: 640px) {
             .hero h1 { font-size: 1.8rem; }
         }
@@ -123,9 +108,7 @@
         {{ content }}
     </div>
 
-    <footer>
-        <p>© 2025 GreenBandYt | <a href="https://github.com/GreenBandYt">GitHub</a> | <a href="https://zerocoder.ru/">Zerocoder</a></p>
-    </footer>
+    {% include footer.html %}
 </div>
 </body>
 </html>
