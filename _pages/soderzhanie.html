@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Содержание"
+---
+<div class="content-card">
+    <div id="content-container" class="markdown-body">
+        <p style="text-align: center; padding: 2rem;">⏳ Загрузка содержания...</p>
+    </div>
+</div>
+<div style="text-align: center; margin: 2rem 0 0;">
+    <a href="/" class="placeholder-link">← На главную</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("content-container");
+        const contentUrl = "https://raw.githubusercontent.com/GreenBandYt/UnexpectedGardener/main/chapters/CONTENTS.md";
+        fetch(contentUrl)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(markdown => {
+                let html = marked.parse(markdown);
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                // Заголовки h2 в ссылки
+                const headings = tempDiv.querySelectorAll('h2');
+                headings.forEach(h2 => {
+                    const text = h2.innerText;
+                    const link = document.createElement('a');
+                    link.href = '#';
+                    link.textContent = text;
+                    h2.innerHTML = '';
+                    h2.appendChild(link);
+                });
+                // Пункты списков в ссылки
+                const listItems = tempDiv.querySelectorAll('li');
+                listItems.forEach(li => {
+                    if (li.querySelector('a')) return;
+                    const text = li.childNodes[0]?.nodeType === Node.TEXT_NODE ? li.childNodes[0].textContent.trim() : '';
+                    if (text) {
+                        const link = document.createElement('a');
+                        link.href = '#';
+                        link.textContent = text;
+                        if (li.childNodes[0] && li.childNodes[0].nodeType === Node.TEXT_NODE) {
+                            li.replaceChild(link, li.childNodes[0]);
+                        } else {
+                            li.insertBefore(link, li.firstChild);
+                        }
+                    }
+                });
+                container.innerHTML = tempDiv.innerHTML;
+            })
+            .catch(error => {
+                console.error("Ошибка загрузки содержания:", error);
+                container.innerHTML = `<p>❌ Не удалось загрузить содержание.</p>`;
+            });
+    });
+</script>
