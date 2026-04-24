@@ -10,9 +10,7 @@ title: "1.1 Почему я вообще начал знакомство с ми
 </div>
 
 <div style="display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
-    <div style="flex: 1; text-align: left;">
-        <!-- нет предыдущего -->
-    </div>
+    <div style="flex: 1; text-align: left;"></div>
     <div style="flex: 1; text-align: center;">
         <a href="/soderzhanie" class="placeholder-link">📖 Содержание</a>
     </div>
